@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int registrationNo;
+
+    public Student() {
+        name = null;
+        registrationNo = 0;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRegistrationNo(int registrationNo) {
+        this.registrationNo = registrationNo;
+    }
+
+    public void show() {
+        System.out.println(name + "," + registrationNo);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Student student = new Student();
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                String name = scanner.next();
+                int registrationNo = scanner.nextInt();
+                while (registrationNo <= 0) {
+                    System.out.println("Invalid registration number. Enter a positive number: ");
+                    registrationNo = scanner.nextInt();
+                }
+                student.setName(name);
+                student.setRegistrationNo(registrationNo);
+                student.show();
+                break;
+            case 2:
+                student.show();
+                break;
+            default:
+                System.out.println("Wrong Choice");
+        }
+    }
+}
