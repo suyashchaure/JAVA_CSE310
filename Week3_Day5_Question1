@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+        double balance=sc.nextDouble();
+        int number =sc.nextInt();
+        
+      switch(number){  
+    case 1: double withdrawal=sc.nextDouble();
+              System.out.println(balance-withdrawal+"0");  
+    break;  
+    case 2:   double deposit=sc.nextDouble();
+              System.out.println(balance+deposit+"0");  
+    break;  
+    case 3: System.out.println(balance);  
+    break;  
+    default:System.out.println("Error");  
+    }    
+
+    }
+}
