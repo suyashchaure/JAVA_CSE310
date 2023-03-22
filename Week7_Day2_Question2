@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();  // get the input number from user
+        boolean result = check(n);  // call the check() method to determine if the number is even and a multiple of 13
+        if (result) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+    }
+
+    public static boolean check(int n) {
+        if (n < 10 || n > 500) {  // check if the number is within the given constraints
+            System.out.println("Invalid Input");
+            return false;
+        }
+        if (n % 2 == 0 && n % 13 == 0) {  // check if the number is even and a multiple of 13
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
