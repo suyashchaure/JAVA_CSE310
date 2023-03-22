@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the deck
+
+        int n = scanner.nextInt();
+
+        // Create the two decks
+
+        int[] deck1 = new int[n];
+
+        int[] deck2 = new int[n];
+
+        // Read the values into the first deck and copy them to the second deck
+
+        for (int i = 0; i < n; i++) {
+
+            int value = scanner.nextInt();
+
+            deck1[i] = value;
+
+            deck2[i] = value;
+
+        }
+
+        // Print the contents of both decks
+
+        for (int i = 0; i < n; i++) {
+
+            System.out.print(deck1[i] + " ");
+
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < n; i++) {
+
+            System.out.print(deck2[i] + " ");
+
+        }
+
+    }
+
+}
