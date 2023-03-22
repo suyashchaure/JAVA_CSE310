@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String password = scanner.nextLine();  // get the password input from user
+        String pythonCasePassword = password.toLowerCase().replace(" ", "$");  // convert to lower case and replace space with $
+        System.out.println(pythonCasePassword);  // print the converted password
+    }
+}
